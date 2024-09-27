@@ -42,9 +42,8 @@ def ct_rate(time):
 def calculate_rates(main_theory_rates, sigma,cts,time):
     #recalculates students after each publish based on total tau (essentially assuming you grad at every student), will be replace with accurate phi*tau data later
     tau_current = sum(main_theory_values)+cts
-    sigma = math.floor(sigma + (tau_current - tau_start) / 20.36)
     if (tau_current < 4550):
-        sigma = math.floor(95 + (tau_current - tau_start) / 16.66)
+        sigma = math.floor(95 + (tau_current - 2050) / 16.66)
     elif (tau_current > 4550 and tau_current < 7070):
         sigma = math.floor(245 + (tau_current - 4550) / 25.2)
     elif (tau_current > 7070 and tau_current < 10110):
