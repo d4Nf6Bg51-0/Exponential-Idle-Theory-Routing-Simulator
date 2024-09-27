@@ -140,7 +140,7 @@ def generate_ct_routing(distribution, ct_pub_count_array, all_cts_pub_marks, all
             elapsed_time = generate_ct_routing_helper(fastest, cts, ct_pub_count_array, all_cts_pub_marks, all_cts_rates, elapsed_time)
 
             # Cap cts to 600 in case it goes over
-            for i in range(7):
+            for i in range(6):
                 if cts[i] > 600:
                     cts[i] = 600
 
